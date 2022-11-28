@@ -33,8 +33,8 @@ def is_anagram(first_string, second_string):
     if primeira == segunda:
         return (primeira, segunda, True)
 
-    lista_primeira = [primeira]
-    lista_segunda = [segunda]
+    lista_primeira = list(primeira)
+    lista_segunda = list(segunda)
 
     quicksort(lista_primeira, 0, len(lista_primeira) - 1)
     quicksort(lista_segunda, 0, len(lista_segunda) - 1)
@@ -46,4 +46,5 @@ def is_anagram(first_string, second_string):
         return (join_lista_primeira, join_lista_segunda, False)
     if lista_primeira == lista_segunda:
         return (join_lista_primeira, join_lista_segunda, True)
+
     return (join_lista_primeira, join_lista_segunda, False)
